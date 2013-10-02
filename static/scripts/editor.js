@@ -36,8 +36,10 @@ function setPreviewHtml(html) {
         doc = iframe.contentWindow.document; // For IE5.5 and IE6
     }
     doc.open();
-    linkHref = $("#flasky").attr('href')
-    doc.writeln('<link rel="stylesheet" type="text/css" href="' + linkHref + '" />');
+    flaskHref = $("#flasky").attr('href')
+    pygmentsHref = $("#pygments").attr('href')
+    doc.writeln('<link rel="stylesheet" type="text/css" href="' + flaskHref + '" />');
+    doc.writeln('<link rel="stylesheet" type="text/css" href="' + pygmentsHref + '" />');
     doc.writeln(html);
     doc.close();
     var body = doc.body;
