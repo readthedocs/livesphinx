@@ -9,6 +9,7 @@ from flask import Flask, request, render_template, make_response, url_for
 
 from rsted.html import rst2html as _rst2html
 from rsted.pdf import rst2pdf as _rst2pdf
+from localsphinx.convert import magic_convert_function
 
 from flaskext.redis import RedisManager
 from flaskext.helpers import render_html
@@ -57,7 +58,7 @@ def rst2html():
     theme = request.form.get('theme')
     if theme == 'basic':
         theme = None
-    html = _rst2html(rst, theme=theme)
+    html = magic_convert_function(rst)
     return html
 
 @app.route('/srv/rst2pdf/', methods=['POST'])
