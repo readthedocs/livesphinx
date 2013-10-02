@@ -104,7 +104,7 @@ function genPreview() {
     lastContent = rstContent;
     activeXhr = $.ajax({
         'url': '/srv/rst2html/',
-        'data': {'rst': rstContent, 'theme': getSelectedTheme()},
+        'data': {'rst': rstContent},
         'type': 'POST',
         'error': function(xhr) {
             setPreviewHtml(xhr.responseText);

@@ -3,7 +3,7 @@
     <head>
         {% block head %}
         <meta charset="UTF-8">
-        <title>{% block title %}Online reStructuredText editor{% endblock %}</title>
+        <title>{% block title %}Online Sphinx editor{% endblock %}</title>
 
         <link rel="stylesheet" href="{{ MEDIA_URL }}style/base.css"/>
         <link rel="stylesheet" href="{{ MEDIA_URL }}style/site.css"/>
@@ -23,7 +23,7 @@
         {% block body_head %}
         {% endblock %}
         <header id="header">
-            <h1>{% block site_title %}Online reStructuredText editor{% endblock %}</h1>
+            <h1>{% block site_title %}Online Sphinx editor{% endblock %}</h1>
             <menu id="navigation">
                 {%- block main_nav %}
                 <ul class="menu" id="menu">
@@ -46,7 +46,7 @@
         </div>
 
         <footer id="footer">
-            <span class="left"><a href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">Quick reStructuredText reference</a></span>
+            <span class="left"><a href="http://sphinx-doc.org/rest.html">reStructuredText reference</a></span>
             <span class="right">Copyright © rst.ninjs.org, 2011</span>
         </footer>
 
