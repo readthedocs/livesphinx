@@ -36,6 +36,8 @@ function setPreviewHtml(html) {
         doc = iframe.contentWindow.document; // For IE5.5 and IE6
     }
     doc.open();
+    linkHref = $("#flasky").attr('href')
+    doc.writeln('<link rel="stylesheet" type="text/css" href="' + linkHref + '" />');
     doc.writeln(html);
     doc.close();
     var body = doc.body;
